@@ -7,11 +7,11 @@
         fill="none" stroke="#d917e3" stroke-width="20" stroke-linecap="round"/>
 
   <!-- Terminal box -->
-  <rect x="60" y="100" width="80" height="50" rx="3" fill="#000000"/>
+  <rect x="70" y="105" width="60" height="50" rx="3" fill="#000000"/>
 
   <!-- Terminal prompt -->
-  <text x="72" y="125"
+  <text x="78" y="137"
         font-family="monospace"
-        font-size="20"
+        font-size="32"
         fill="#ffffff">&gt;_</text>
 </svg>
