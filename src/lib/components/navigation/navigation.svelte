@@ -8,7 +8,27 @@
 </script>
 
 <nav class="sidebar">
-  <img src={logo} alt="AuthLock Logo" class="logo" />
+  <!-- img src={logo} alt="AuthLock Logo" class="logo" / -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="logo">
+    <rect x="40" y="80" width="120" height="90" rx="14" fill="currentColor" />
+
+    <!-- Open shackle -->
+    <path
+      d="M70 80 V50 A30 30 0 0 1 130 50"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="20"
+      stroke-linecap="round"
+    />
+
+    <!-- Terminal box -->
+    <rect x="70" y="105" width="60" height="50" rx="3" fill="#000000" />
+
+    <!-- Terminal prompt -->
+    <text x="78" y="137" font-family="monospace" font-size="32" fill="#ffffff"
+      >&gt;_</text
+    ></svg
+  >
   <ul class="nav-list">
     <li>
       <a
@@ -68,6 +88,7 @@
     margin-top: 10px;
     margin-bottom: 20px;
     align-self: flex-start;
+    color: var(--clr-primary-a0);
   }
 
   .nav-list {

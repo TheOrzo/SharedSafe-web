@@ -12,13 +12,12 @@
   --clr-light-a0: #ffffff;
 
   /** Theme primary colors */
-  --clr-primary-a0: #d917e3;
-  --clr-primary-a10: #e047e7;
-  --clr-primary-a20: #e664ea;
-  --clr-primary-a30: #eb7dee;
-  --clr-primary-a40: #f095f1;
-  --clr-primary-a50: #f5abf4;
-  --clr-primary-a60: #f8c0f7;
+  --clr-primary-a0: #f870ff;
+  --clr-primary-a10: #fa83ff;
+  --clr-primary-a20: #fc94ff;
+  --clr-primary-a30: #fea4ff;
+  --clr-primary-a40: #ffb4ff;
+  --clr-primary-a50: #ffc4ff;
 
   /** Theme primary colors */
   --clr-secondary-a0: #6aafe6;
