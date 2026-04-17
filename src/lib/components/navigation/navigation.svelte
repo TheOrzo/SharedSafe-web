@@ -2,33 +2,13 @@
   import HomeIcon from "@lucide/svelte/icons/layout-dashboard";
   import ListIcon from "@lucide/svelte/icons/logs";
   import SettingsIcon from "@lucide/svelte/icons/settings";
-  import logo from "$lib/assets/logo.svg";
 
   import { page } from "$app/state";
+  import Logo from "$lib/components/logo.svelte";
 </script>
 
 <nav class="sidebar">
-  <!-- img src={logo} alt="AuthLock Logo" class="logo" / -->
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="logo">
-    <rect x="40" y="80" width="120" height="90" rx="14" fill="currentColor" />
-
-    <!-- Open shackle -->
-    <path
-      d="M70 80 V50 A30 30 0 0 1 130 50"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="20"
-      stroke-linecap="round"
-    />
-
-    <!-- Terminal box -->
-    <rect x="70" y="105" width="60" height="50" rx="3" fill="#000000" />
-
-    <!-- Terminal prompt -->
-    <text x="78" y="137" font-family="monospace" font-size="32" fill="#ffffff"
-      >&gt;_</text
-    ></svg
-  >
+  <div class="logo"><Logo /></div>
   <ul class="nav-list">
     <li>
       <a
@@ -52,19 +32,20 @@
         <span>Logs</span>
       </a>
     </li>
+    <li>
+      <a
+        class="nav-item"
+        href="/settings"
+        aria-label="Settings"
+        aria-current={page.url.pathname === "/settings"}
+      >
+        <SettingsIcon class="icon" />
+        <span>Settings</span>
+      </a>
+    </li>
   </ul>
 
-  <div class="bottom">
-    <a
-      class="nav-item"
-      href="/settings"
-      aria-label="Settings"
-      aria-current={page.url.pathname === "/settings"}
-    >
-      <SettingsIcon class="icon" />
-      <span>Settings</span>
-    </a>
-  </div>
+  <div class="bottom"></div>
 </nav>
 
 <style>
@@ -73,9 +54,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 150px;
+    width: 200px;
     height: 100vh;
     background-color: var(--sidebar);
+    border: 1px var(--sidebar-border);
+  }
+
+  /* keep above content */
+  .sidebar {
+    z-index: 50;
   }
 
   .sidebar li {
@@ -86,7 +73,8 @@
     width: 87px;
     height: 87px;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin-left: 15px;
     align-self: flex-start;
     color: var(--clr-primary-a0);
   }
@@ -94,11 +82,11 @@
   .nav-list {
     list-style: none;
     padding: 0;
-    padding-left: 10px;
+    padding-left: 30px;
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 20px;
     height: 100%;
   }
 
@@ -109,10 +97,11 @@
     height: 30px;
     border-radius: 0.75rem;
     text-decoration: none;
+    font-size: 13pt;
   }
 
   .nav-item[aria-current="true"] {
-    background: var(--clr-surface-a10);
+    /*background: var(--clr-surface-a10);*/
     color: var(--clr-primary-a20);
   }
 
@@ -125,14 +114,58 @@
     color: var(--clr-primary-a30);
   }
 
-  .icon {
-    width: 20px;
-    height: 20px;
-  }
-
   .bottom {
     display: flex;
     justify-content: center;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+  }
+
+  /* Responsive: on narrow screens move nav to bottom and hide labels/logo */
+  @media (max-width: 799px) {
+    .sidebar {
+      position: fixed;
+      top: auto;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 64px;
+      flex-direction: row;
+      justify-content: center;
+      padding: 0;
+    }
+
+    .logo {
+      display: none;
+    }
+
+    .nav-list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      padding-left: 0;
+      gap: 8px;
+      margin: 0;
+      height: 100%;
+      width: auto;
+    }
+
+    .nav-item {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      height: 48px;
+      border-radius: 10px;
+    }
+
+    .nav-item span {
+      display: none;
+    }
+
+    .bottom {
+      display: none;
+    }
   }
 </style>

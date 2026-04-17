@@ -7,7 +7,22 @@
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
+
 <Navigation />
-<div style="margin-left: 150px; padding: 1px 16px;">
+<div class="content">
   {@render children()}
 </div>
+
+<style>
+  .content {
+    margin-left: 200px;
+    padding: 1px 16px;
+  }
+
+  @media (max-width: 799px) {
+    .content {
+      margin-left: 0;
+      padding-bottom: 70px;
+    }
+  }
+</style>

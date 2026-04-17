@@ -1,17 +1,17 @@
 <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <!-- Lock body -->
-  <rect x="40" y="80" width="120" height="90" rx="14" fill="#d917e3"/>
+  <rect x="40" y="80" width="120" height="90" rx="14" fill="#9c7efc"/>
 
   <!-- Open shackle -->
   <path d="M70 80 V50 A30 30 0 0 1 130 50"
-        fill="none" stroke="#d917e3" stroke-width="20" stroke-linecap="round"/>
+        fill="none" stroke="#9c7efc" stroke-width="20" stroke-linecap="round"/>
 
   <!-- Terminal box -->
-  <rect x="60" y="100" width="80" height="50" rx="3" fill="#000000"/>
+  <rect x="70" y="105" width="60" height="50" rx="3" fill="#000000"/>
 
   <!-- Terminal prompt -->
-  <text x="72" y="125"
+  <text x="78" y="137"
         font-family="monospace"
-        font-size="20"
+        font-size="32"
         fill="#ffffff">&gt;_</text>
 </svg>
