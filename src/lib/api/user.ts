@@ -7,7 +7,7 @@ const users: User[] = [
         groups: ["Mitglieder"],
         nfc: "",
         pin: "",
-        isAdmin: false,
+        isAdmin: true,
         isPriviledged: false
     },
     {
@@ -40,7 +40,7 @@ const users: User[] = [
 ];
 
 export function getUser() {
-    return users[3];
+    return users[0];
 }
 
 export function getUsers(){

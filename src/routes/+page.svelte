@@ -5,7 +5,7 @@
 
   import { getUser, getUsers } from "$lib/api/user";
 
-  let addPanel: LockPanel;
+  let addPanel = $state<LockPanel>();
 
   function addPanelClickHandler() {
     console.log("Add panel clicked");

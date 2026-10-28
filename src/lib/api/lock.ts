@@ -7,9 +7,10 @@ export function getLocks()
     let locks: Lock[] = [
     {
       lockId: 0,
-      title: "Main Entrance",
+      name: "Main Entrance",
       type: 1,
       description: "The main entrance lock of the building",
+      useEncryption: true,
       hasLockSensor: true,
       hasOpenSensor: true,
       hasBypassSensor: false,
@@ -22,9 +23,10 @@ export function getLocks()
     },
     {
       lockId: 1,
-      title: "Wechselgeld Tresor",
+      name: "Wechselgeld Tresor",
       type: 4,
       description: "Tresor im Gezi mit Gagen und Wechsegeld",
+      useEncryption: true,
       hasLockSensor: true,
       hasOpenSensor: true,
       hasBypassSensor: true,
@@ -37,9 +39,10 @@ export function getLocks()
     },
     {
       lockId: 2,
-      title: "Carport",
+      name: "Carport",
       type: 3,
       description: "Carport Zugang",
+      useEncryption: true,
       hasLockSensor: false,
       hasOpenSensor: false,
       hasBypassSensor: false,
@@ -52,9 +55,10 @@ export function getLocks()
     },
     {
       lockId: 3,
-      title: "GR Schließfach 1",
+      name: "GR Schließfach 1",
       type: 2,
       description: "Queerbeet Schließfach im Gruppenraum",
+      useEncryption: true,
       hasLockSensor: false,
       hasOpenSensor: false,
       hasBypassSensor: false,

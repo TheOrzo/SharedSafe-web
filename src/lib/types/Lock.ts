@@ -1,10 +1,3 @@
-export const UNSPECIFIED = 0;
-export const DOOR = 1;
-export const SHED = 2;
-export const LOCKER = 3;
-export const SAFE = 4;
-export const BIKE = 5;
-
 export enum Type {
   UNSPECIFIED = 0,
   DOOR = 1,
@@ -23,13 +16,16 @@ export enum State {
 
 export interface Lock {
   lockId: number;
-  title: string;
+  name: string;
   type: Type;
   description: string;
   hasLockSensor: boolean;
   hasOpenSensor: boolean;
   hasBypassSensor: boolean;
+
+  useEncryption: boolean;
   bypassResetMandatory: boolean;
+  useDoorSensor: boolean;
   
   state: State;
   lastUser: string | null;

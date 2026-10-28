@@ -1,0 +1,9 @@
+{
+  "devices": [
+    {
+      "id": "vault-1",
+      "name": "Wechselgeld Tresor",
+      "key": "generate with: openssl rand -hex 32"
+    }
+  ]
+}
